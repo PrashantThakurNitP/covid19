@@ -1,0 +1,352 @@
+
+{% extends 'cases/bases.html' %}
+
+{% block content %}
+
+
+
+
+
+<style type="text/css">
+
+
+
+body {
+ /* background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;*/
+  background-color: #C09F80;
+    background-color:#c0deed;
+  margin-top: 0vw;
+}
+
+
+  #b1
+{
+      font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Great Vibes', cursive;
+}
+/*#s2
+{
+    height: 60vw;
+    width :70vw;
+    margin-left: 0vw;
+    margin-right: auto;
+  }
+  #s1
+  {
+
+
+    margin-left: 5vw;
+    margin-right:   auto;
+    width :75vw;
+  }
+  #s3
+  {
+    margin-left: 0vw;
+
+    width: 160vw;
+
+  }*/
+.flex-container_h1{
+
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    height: 15vh;
+
+
+    align-items: flex-start;
+    align-content: center;
+
+     flex-wrap: wrap;
+     background-color: #763235;
+     background-color:#38A1F3;
+
+
+
+
+
+  }
+  .flex-container_h{
+    display: flex;
+    margin-top: 2vh;
+    padding-right: 1vw;
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+  #boxcard
+  {
+    display: flex;
+    width: 20vw;
+    height: 55vh;
+    margin:2vw;
+    margin-top:0vh;
+    margin-right: 0vw;
+      background-color:#38A1F3;
+      color : #76323f;
+      color:white;
+      box-shadow: 5px 10px #888888;
+  }
+  #boxcard:hover
+{
+  background-color: #cc0099;
+
+}
+  .oval
+  {
+    border-radius: 50%;
+  }
+  #id_username
+  {
+    background-color: white;
+    color: #38A1F3;
+  }
+#fr
+{
+
+  margin-left:5vw;
+  color: white ;
+  margin-top: 1vh;
+}
+#sr
+{
+  margin-left: 10vw;
+  margin-top: 1.5vh;
+  border-radius :10%;
+}
+#id_username
+{
+
+  height: 4vh;
+  width: 15vw;
+
+}
+ #bt1
+  {
+    height: 4vh;
+  width: 10vw;
+  font-size: 0.7em;
+  color: 38A1F3;
+  margin-top: 0.7vh;
+  }
+
+  @media only screen and (max-width: 990px)
+{
+
+
+.flex-container_h1{
+
+
+    width: 90vw;
+
+
+  }
+
+}
+
+
+
+@media only screen and (max-width: 800px)
+{
+
+
+.flex-container_h1{
+
+    display: flex;
+    margin-top: 0vh;
+    align-items: flex-start;
+    align-content: center;
+    width: 74vw;
+     flex-wrap: wrap;
+     background-color: #763235;
+     background-color:#38A1F3;
+
+
+
+  }
+
+     #boxcard
+  {
+    display: flex;
+    width: 85vw;
+    height: 60vh;
+    margin:1vw;
+    margin-left:5vw;
+
+    box-shadow: 2px 4px #888888;
+
+  }
+   #boxcard:hover
+  {
+      background-color: #cc0099;
+
+   }
+   #bt1
+   {
+    width: 20vw;
+   }
+}
+
+
+
+  @media only screen and (max-width: 800px)
+{
+#flex-container_h1
+{
+  margin-top: 1vh;
+}
+#fr
+{
+
+  padding-left:1vw;
+
+  margin-top: 0vh;
+ justify-content: center;
+
+}
+#sr
+{
+  margin-left: 7vw ;
+  margin-top: 0vh
+}
+#frt
+{
+  font-size: 1.5em;
+
+}
+
+#id_username
+{
+  margin-left: 1vw;
+  height: 4vh;
+  width: 20vw;
+  }
+  #bt1
+  {
+    height: 4vh;
+  width: 30vw;
+  font-size: 1em;
+  color:38A1F3;
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 580px)
+{
+
+#fr
+{
+
+  padding-left:10vw;
+
+  margin-top: 0.5vh;
+ justify-content: center;
+
+}
+#sr
+{
+  margin-left: 5vw ;
+  margin-top: 0.2vh
+}
+#frt
+{
+  font-size: 1.5em;
+
+}
+
+#id_username
+{
+  margin-left: 5vw;
+  height: 4vh;
+  width: 40vw;
+  }
+  #bt1
+  {
+    height: 4vh;
+  width: 35vw;
+  font-size: 0.7em;
+
+
+  }
+
+  .flex-container_h1{
+
+    display: flex;
+    margin-top: 1vh;
+    align-items: flex-start;
+    align-content: center;
+    margin-left: 0vw;
+    width: 100vw;
+     flex-wrap: wrap;
+
+
+
+
+  }
+
+
+}
+
+
+
+
+</style>
+<body>
+<div  class="flex-container_h1">
+
+<div id="fr"  ><h2 id="frt">COVID DASH BOARD</h2></div>
+
+
+
+
+</div>
+
+
+<div  class="flex-container_h">
+
+{% for city in cases %}
+            <div id="boxcard" class="card">
+            <img class="oval" class="oval" src="{{city.cityimageurl}}" alt="Avatar" style="height: 60%">
+            <div class="container">
+             <h4 ><b>{{city.city_name}}</b></h4>
+             <p style="color: white",style="font-size: 1.2em">Total cases :{{city.total_cases}}</p>
+              <p style="color: white",style="font-size: 1.2em">Current cases : {{city.current_cases}}</p>
+               <p style="color: white",style="font-size: 1.2em">Death cases : {{city.death_cases}}</p>
+            </div>
+          </div>
+{% endfor %}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+{% endblock %}
+
+
+
+
+
+
